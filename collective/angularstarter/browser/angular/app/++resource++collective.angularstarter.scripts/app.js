@@ -1,15 +1,16 @@
 var app = angular.module("firstApp", ["solr"]);
 
-app.controller("MainCtrl", function($scope, $location){
+app.controller("MainCtrl", ["$scope", "$location",  function($scope, $location){
+
   $scope.params= $location.search();
-});
+}]);
 
   app.directive("resultDocument", function() {
     return {
       restrict: "E",
       scope :{
-        doc : "=record", 
+        doc : "=record",
       },
-      templateUrl:"app/view/my_result_document.html",
+      templateUrl:"++resource++collective.angularstarter.views/my_result_document.html",
     }
   });
