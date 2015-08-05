@@ -1,51 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Angular and Solr Searching</title>
+
+    <link rel="stylesheet" href="++resource++collective.angularstarter.bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="all" />
+    <!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" media="all" />-->
     <!-- build:css({.,.tmp}) ++resource++collective.angularstarter.styles/main.css -->
-    <link rel="stylesheet" href="++resource++collective.angularstarter.bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="++resource++collective.angularstarter.styles/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="++resource++collective.angularstarter.bower_components/bootstrap/dist/css/bootstrap.css" /> 
+        <link rel="stylesheet" href="++resource++collective.angularstarter.styles/main.css"> 
+        <!-- endbuild -->
+
   </head>
   <body>
+    <div ng-app="firstApp" ng-controller="MainCtrl">
+      <div class="container">
+        <h1>Angular and Solr Searching</h1>
+        <solr docs="docs" num-found="numFound" solr-url="'http://delije-server.adm.ds.fhnw.ch:8983/solr/collection1/angular/'">
+          <div class="row">
+            <div class="col-md-4">
+              <solr-facet-group>
+                <h2>Search:</h2>
+                <solr-search preload='true' query='{{params.q}}'></solr-search>
+                <solr-selected><h2>Selected:</h2></solr-selected>
+                <h2>Facet List:</h2>
+                <solr-facet display="Resource Type" field="mods_type_of_resource"></solr-facet>
+                <solr-facet display="Object Type"   field="object_type"></solr-facet>
+                <solr-facet display="Keyword"       field="mods_subject_ssim"></solr-facet>
+              </solr-facet-group>
+            </div>
 
-    <!-- Add your site or application content here -->
-    <div class="container" ng-app="angularApp" ng-cloak>
-
-      <h2>collective.angularstarter</h2>
-      Get started with Plone + AngularJS without any of the normal headaches associated with a manual setup.
-
-      Yeoman powered
-
-      <div ng-view=""></div>
-
+            <div class="col-md-8">
+              <h2>Results ({{numFound}})</h2>
+              <ul class="list-unstyled">
+                <li ng-repeat="doc in docs">
+                  <result-document record=doc ></result-document>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </solr>
+      </div>
     </div>
+    <script src="++resource++collective.angularstarter.bower_components/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+        <!-- build:js({.tmp,app}) ++resource++collective.angularstarter.scripts/scripts.js -->
+    <script src="++resource++collective.angularstarter.scripts/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="++resource++collective.angularstarter.scripts/solr.js" type="text/javascript" charset="utf-8"></script>
 
-    <!-- build:js(.) ++resource++collective.angularstarter.scripts/oldieshim.js -->
-    <!--[if lt IE 9]>
-    <script src="++resource++collective.angularstarter.bower_components/es5-shim/es5-shim.js"></script>
-    <script src="++resource++collective.angularstarter.bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
     <!-- endbuild -->
-
-    <!-- cdnifable resources-->
-    <script src="++resource++collective.angularstarter.bower_components/angular/angular.js"></script>
-    <script src="++resource++collective.angularstarter.bower_components/angular-route/angular-route.js"></script>
-
-    <!-- build:js(.) ++resource++collective.angularstarter.scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="++resource++collective.angularstarter.bower_components/angular-translate/angular-translate.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js({.tmp,app}) ++resource++collective.angularstarter.scripts/scripts.js -->
-    <script src="++resource++collective.angularstarter.scripts/app.js"></script>
-    <script src="++resource++collective.angularstarter.scripts/controllers/main.js"></script>
-    <!-- endbuild -->
-
-</body>
+  </body>
 </html>

@@ -1,43 +1,15 @@
-'use strict';
+var app = angular.module("firstApp", ["solr"]);
 
-/**
- * @ngdoc overview
- * @name angularApp
- * @description
- * # angularApp
- *
- * Main module of the application.
- */
-angular
-  .module('angularApp', [
-    'pascalprecht.translate',
-    'ngRoute'
-  ])
-  .config(['$translateProvider', function ($translateProvider) {
-    var defaultLanguage = 'en';
+app.controller("MainCtrl", function($scope, $location){
+  $scope.params= $location.search();
+});
 
-    $translateProvider.translations('en', {
-      HELLO: 'Hello'
-    });
-    $translateProvider.translations('it', {
-      HELLO: 'Ciao',
-    });
-    $translateProvider.preferredLanguage(defaultLanguage);
-    $translateProvider.determinePreferredLanguage(function () {
-      // is navigator language ok or should we consider also the user's lang cookie
-      // since we are dealing with plone?
-      var navigatorLanguage = navigator.language;
-
-      return navigatorLanguage ? navigatorLanguage : defaultLanguage;
-    });
-  }])
-  .config(['$routeProvider', function ($routeProvider) {
-    $routeProvider
-      .when('/main', {
-        templateUrl: '++resource++collective.angularstarter.views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/main'
-      });
-  }]);
+  app.directive("resultDocument", function() {
+    return {
+      restrict: "E",
+      scope :{
+        doc : "=record", 
+      },
+      templateUrl:"app/view/my_result_document.html",
+    }
+  });
