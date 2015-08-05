@@ -1,4 +1,4 @@
-collective.angularstarter
+collective.angularstarter (fhnw)
 =========================
 
 Get started with Plone + AngularJS (Yeoman powered) without any of the normal headaches associated with a manual setup.
