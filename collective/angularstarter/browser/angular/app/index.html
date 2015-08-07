@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="example.conference">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Angular and Solr Searching</title>
@@ -7,14 +13,15 @@
 
     <!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" media="all" />-->
     <!-- build:css({.,.tmp}) ++resource++collective.angularstarter.styles/main.css -->
-    <link rel="stylesheet" href="++resource++collective.angularstarter.bower_components/bootstrap/dist/css/bootstrap.css" /> 
-
-
-        <link rel="stylesheet" href="++resource++collective.angularstarter.styles/main.css"> 
+    <link rel="stylesheet" href="++resource++collective.angularstarter.bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="++resource++collective.angularstarter.styles/main.css">
         <!-- endbuild -->
 
   </head>
   <body>
+    <metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main">
+
     <div ng-app="firstApp" ng-controller="MainCtrl">
       <div class="container">
         <h1>Angular and Solr Searching</h1>
@@ -49,5 +56,8 @@
     <script src="++resource++collective.angularstarter.scripts/solr.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- endbuild -->
+    </tal:main-macro>
+</metal:main>
+
   </body>
 </html>
