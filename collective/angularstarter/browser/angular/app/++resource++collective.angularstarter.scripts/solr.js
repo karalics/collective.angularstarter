@@ -57,7 +57,7 @@ var solr = angular.module("solr", [])
     scope:{},
     controller: function($scope) {
       $scope.selected = {
-        field: "mods_type_of_resource",
+        field: "Language",
         value: "notated music"
       }
     },
