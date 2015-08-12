@@ -36,6 +36,4 @@ setup(name='collective.angularstarter',
       [console_scripts]
       collective_angularstarter_clone = collective.angularstarter.scripts:collective_angularstarter_clone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
       )
