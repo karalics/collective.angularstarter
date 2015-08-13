@@ -55,12 +55,12 @@ var solr = angular.module("solr", [])
   return {
     restrict: "E",
     scope:{},
-    controller: function($scope) {
+    controller: ["$scope", function($scope) {
       $scope.selected = {
         field: "Language",
-        value: "notated music"
+        value: "any"
       }
-    },
+    }],
     transclude: true,
     templateUrl: "++resource++collective.angularstarter.views/solr_selected.html",
     require:"^solr",
