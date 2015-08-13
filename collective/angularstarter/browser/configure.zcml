@@ -49,15 +49,15 @@
 
   <!-- View templates -->
   <browser:page
-    for="*"
-    name="angularstarter"
+    for="Products.CMFCore.interfaces.ISiteRoot"
+    name="wbsuche"
     template="angular/app/index.html"
     permission="zope2.View"
     layer=".interfaces.ICollectiveAngularstarterDevelLayer"
     />
   <browser:page
-    for="*"
-    name="angularstarter"
+    for="Products.CMFCore.interfaces.ISiteRoot"
+    name="wbsuche"
     template="angular/dist/index.html"
     permission="zope2.View"
     layer=".interfaces.ICollectiveAngularstarterProductionLayer"
