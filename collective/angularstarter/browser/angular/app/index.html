@@ -29,10 +29,11 @@
           <div class="row">
             <div class="col-md-4">
               <solr-facet-group>
-                <h2>Kategorien:</h2>
-                <solr-facet display="Language"   field="Language"></solr-facet>
-                <solr-selected><h2>Ausgew&auml;hlt:</h2></solr-selected>
-                <h2>Suche:</h2>
+                <h3>Filterung:</h3>
+                <solr-facet display="Sprache"   field="Language"></solr-facet>
+
+                <solr-selected><h3>Ausgew&auml;hlte Filter:</h3></solr-selected>
+                <h3>Suche:</h3>
                 <solr-search preload='true' query='{{params.q}}'></solr-search>
 
 
@@ -40,7 +41,7 @@
             </div>
 
             <div class="col-md-8">
-              <h2>Results ({{numFound}})</h2>
+              <h3>Resultate ({{numFound}})</h3>
               <ul class="list-unstyled">
                 <li ng-repeat="doc in docs">
                   <result-document record=doc ></result-document>
