@@ -24,16 +24,17 @@
 
     <div ng-app="firstApp" ng-controller="MainCtrl">
       <div class="container">
-        <h1>Angular and Solr Searching</h1>
+        <h1>Weiterbildungsangebote der FHNW</h1>
         <solr docs="docs" num-found="numFound" solr-url="'http://www.dev.fhnw.ch/solrsearch/weiterbildung/'">
           <div class="row">
             <div class="col-md-4">
               <solr-facet-group>
-                <h2>Facet List:</h2>
+                <h2>Kategorien:</h2>
                 <solr-facet display="Language"   field="Language"></solr-facet>
-                <h2>Search:</h2>
+                <solr-selected><h2>Ausgew&auml;hlt:</h2></solr-selected>
+                <h2>Suche:</h2>
                 <solr-search preload='true' query='{{params.q}}'></solr-search>
-                <solr-selected><h2>Selected:</h2></solr-selected>
+
 
               </solr-facet-group>
             </div>
