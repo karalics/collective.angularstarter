@@ -57,8 +57,8 @@ var solr = angular.module("solr", [])
     scope:{},
     controller: ["$scope", function($scope) {
       $scope.selected = {
-        field: "Language",
-        value: "any"
+        field: "ev_ort",
+        value: "Basel"
       }
     }],
     transclude: true,
