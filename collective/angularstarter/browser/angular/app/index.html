@@ -29,12 +29,13 @@
           <div class="row">
             <div class="col-md-4">
               <solr-facet-group>
+                  <h3>Suche:</h3>
+                <solr-search preload='true' query='{{params.q}}'></solr-search>
                 <h3>Filterung:</h3>
                 <solr-facet display="Ort"   field="ev_ort"></solr-facet>
 
                 <solr-selected><h3>Ausgew&auml;hlte Filter:</h3></solr-selected>
-                <h3>Suche:</h3>
-                <solr-search preload='true' query='{{params.q}}'></solr-search>
+
 
 
               </solr-facet-group>
@@ -42,7 +43,7 @@
 
             <div class="col-md-8">
               <h3>Resultate ({{numFound}})</h3>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled nav-tabs">
                 <li ng-repeat="doc in docs">
                   <result-document record=doc ></result-document>
                 </li>
