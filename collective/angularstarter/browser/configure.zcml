@@ -10,6 +10,12 @@
     directory="angular/++resource++collective.angularstarter.bower_components"
     layer=".interfaces.ICollectiveAngularstarterDevelLayer"
     />
+  <!-- Bower components Production -->
+  <browser:resourceDirectory
+    name="collective.angularstarter.bower_components"
+    directory="angular/++resource++collective.angularstarter.bower_components"
+    layer=".interfaces.ICollectiveAngularstarterProductionLayer"
+    />
 
   <!-- Styles -->
   <browser:resourceDirectory
