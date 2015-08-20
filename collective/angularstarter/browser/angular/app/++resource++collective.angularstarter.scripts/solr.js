@@ -200,7 +200,7 @@ var solr = angular.module("solr", [])
         params = {
           'q': that.getQuery(),
           'facet': "on",
-          'facet.mincount':"1",
+          'facet.mincount':"0",
           'wt': 'json',
           'json.nl': "map",
           'json.wrf': 'JSON_CALLBACK',
