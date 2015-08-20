@@ -55,14 +55,14 @@
 
   <!-- View templates -->
   <browser:page
-    for="Products.CMFCore.interfaces.ISiteRoot"
+    for="*"
     name="wbsuche"
     template="angular/app/index.html"
     permission="zope2.View"
     layer=".interfaces.ICollectiveAngularstarterDevelLayer"
     />
   <browser:page
-    for="Products.CMFCore.interfaces.ISiteRoot"
+    for="*"
     name="wbsuche"
     template="angular/dist/index.html"
     permission="zope2.View"
