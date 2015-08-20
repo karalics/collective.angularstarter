@@ -96,6 +96,10 @@ var solr = angular.module("solr", [])
       if (scope.preload){
         scope.search(scope.query, scope.rows);
       }
+      scope.autoClicked = function () {
+        scope.search(scope.query, scope.rows);
+      }
+
     }
 
   }
@@ -271,4 +275,18 @@ var solr = angular.module("solr", [])
       ctrl.solrUrl = scope.solrUrl;
     }
   };
-});
+})
+
+.directive("onLoadClicker", function($timeout) {
+  return {
+    restrict: "A",
+    priority: -1,
+    link: function(scope, iElm, iAttrs, controller) {
+        $timeout(function() {
+          iElm.triggerHandler('click');
+        }, 0);
+      }
+    };
+  }
+);
+
