@@ -142,6 +142,10 @@ var solr = angular.module("solr", [])
       scope.facetString = function(){
         return scope.field+':"'+scope.key+'"';
       };
+      scope.hidewhenCountNull = function(ctrl){
+        if (scope.count==0) return true;
+          return false;
+      };
 
       scope.isSelected = function(){
         selectedFacets = ctrl.selected_facets;

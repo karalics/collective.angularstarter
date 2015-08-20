@@ -1,4 +1,4 @@
-var app = angular.module("firstApp", ["solr"]);
+var app = angular.module("firstApp", ["solr", "ui.bootstrap"]);
 
 app.controller("MainCtrl", ["$scope", "$location",  function($scope, $location){
 

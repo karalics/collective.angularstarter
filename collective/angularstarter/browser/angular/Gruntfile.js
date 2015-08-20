@@ -280,7 +280,9 @@ module.exports = function (grunt) {
           removeComments: true,
           removeCommentsFromCDATA: true,
           removeEmptyAttributes: true,
-          removeRedundantAttributes: true,
+          removeRedundantAttributes: false,
+          removeScriptTypeAttributes: false,
+          removeStyleLinkTypeAttributes: false,
           useShortDoctype: true
         },
         files: [{
