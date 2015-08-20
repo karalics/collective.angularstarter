@@ -1,3 +1,5 @@
 <span ng-show="remove">{{key}}<a ng-click="removeFacet()"><small>&nbsp;[l&ouml;schen]</a></span>
 <span ng-show="isSelected() && !remove"> {{key}} <em>({{count}})</em> </span>
-<span ng-hide="isSelected()"> <a ng-click="addFacet()"> {{key}}  <em>({{count}})</em> </a></span>
+<span ng-hide="isSelected()"> <a ng-click="addFacet()"  ng-hide="hidewhenCountNull()"> {{key}}  <em>({{count}})</em> </a></span>
+<span ng-show="hidewhenCountNull()">{{key}} <em>({{count}})</span>
+
