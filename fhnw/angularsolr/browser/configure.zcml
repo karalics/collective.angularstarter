@@ -1,0 +1,72 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="fhnw.angularsolr">
+
+  <!-- Bower components (only devel mode) -->
+  <browser:resourceDirectory
+    name="fhnw.angularsolr.bower_components"
+    directory="angular/++resource++fhnw.angularsolr.bower_components"
+    layer=".interfaces.IFhnwAngularsolrDevelLayer"
+    />
+  <!-- Bower components Production -->
+  <browser:resourceDirectory
+    name="fhnw.angularsolr.bower_components"
+    directory="angular/++resource++fhnw.angularsolr.bower_components"
+    layer=".interfaces.IFhnwAngularsolrProductionLayer"
+    />
+
+  <!-- Styles -->
+  <browser:resourceDirectory
+    name="fhnw.angularsolr.styles"
+    directory="angular/app/++resource++fhnw.angularsolr.styles"
+    layer=".interfaces.IFhnwAngularsolrDevelLayer"
+    />
+  <browser:resourceDirectory
+    name="fhnw.angularsolr.styles"
+    directory="angular/dist/++resource++fhnw.angularsolr.styles"
+    layer=".interfaces.IFhnwAngularsolrProductionLayer"
+    />
+
+  <!-- Scripts -->
+  <browser:resourceDirectory
+    name="fhnw.angularsolr.scripts"
+    directory="angular/app/++resource++fhnw.angularsolr.scripts"
+    layer=".interfaces.IFhnwAngularsolrDevelLayer"
+    />
+  <browser:resourceDirectory
+    name="fhnw.angularsolr.scripts"
+    directory="angular/dist/++resource++fhnw.angularsolr.scripts"
+    layer=".interfaces.IFhnwAngularsolrProductionLayer"
+    />
+
+  <!-- Views -->
+  <browser:resourceDirectory
+    name="fhnw.angularsolr.views"
+    directory="angular/app/++resource++fhnw.angularsolr.views"
+    layer=".interfaces.IFhnwAngularsolrDevelLayer"
+    />
+  <browser:resourceDirectory
+    name="fhnw.angularsolr.views"
+    directory="angular/dist/++resource++fhnw.angularsolr.views"
+    layer=".interfaces.IFhnwAngularsolrProductionLayer"
+    />
+
+  <!-- View templates -->
+  <browser:page
+    for="*"
+    name="wbsuche"
+    template="angular/app/index.html"
+    permission="zope2.View"
+    layer=".interfaces.IFhnwAngularsolrDevelLayer"
+    />
+  <browser:page
+    for="*"
+    name="wbsuche"
+    template="angular/dist/index.html"
+    permission="zope2.View"
+    layer=".interfaces.IFhnwAngularsolrProductionLayer"
+    />
+
+</configure>

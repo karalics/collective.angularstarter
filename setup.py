@@ -3,7 +3,7 @@ import os
 
 version = '0.1'
 
-setup(name='collective.angularstarter',
+setup(name='fhnw.angularsolr',
       version=version,
       description="",
       long_description=open("README.rst").read() + "\n" +
@@ -17,7 +17,7 @@ setup(name='collective.angularstarter',
       keywords='',
       author='Davide Moro',
       author_email='davide.moro@gmail.com',
-      url='https://github.com/collective/collective.angularstarter',
+      url='https://github.com/collective/fhnw.angularsolr',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
@@ -34,6 +34,6 @@ setup(name='collective.angularstarter',
       target = plone
 
       [console_scripts]
-      collective_angularstarter_clone = collective.angularstarter.scripts:collective_angularstarter_clone
+      fhnw.angularsolr_clone = fhnw.angularsolr.scripts:fhnw.angularsolr_clone
       """,
       )

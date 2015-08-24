@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <layers>
     <layer name="CollectiveAngularstarterDevelLayer"
-        interface="collective.angularstarter.browser.interfaces.ICollectiveAngularstarterDevelLayer"
+        interface="fhnw.angularsolr.browser.interfaces.ICollectiveAngularstarterDevelLayer"
     />
 </layers>
 

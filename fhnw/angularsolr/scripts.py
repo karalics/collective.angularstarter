@@ -6,12 +6,12 @@ import optparse
 import textwrap
 import pkg_resources
 
-def collective_angularstarter_clone():
+def fhnw_angularsolr_clone():
     description = """\
     Print the deployment settings for a Pyramid application.  Example:
     'show_settings deployment.ini'
     """
-    usage = "usage: collective_angularstarter_clone new_package_name"
+    usage = "usage: fhnw_angularsolr_clone new_package_name"
     parser = optparse.OptionParser(
         usage=usage,
         description=textwrap.dedent(description)
@@ -27,7 +27,7 @@ def collective_angularstarter_clone():
     print('Done!')
 
 
-def _translate(new_package_name, original_package_name='collective.angularstarter'):
+def _translate(new_package_name, original_package_name='fhnw.angularsolr'):
     """ Translate package """
 
     def package_split(package_name, separator='.'):
