@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/++resource++collective.angularstarter.scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/++resource++fhnw.angularsolr.scripts/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/++resource++collective.angularstarter.styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/++resource++fhnw.angularsolr.styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
@@ -58,8 +58,8 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
-          '.tmp/++resource++collective.angularstarter.styles/{,*/}*.css',
-          '<%= yeoman.app %>/++resource++collective.angularstarter.images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '.tmp/++resource++fhnw.angularsolr.styles/{,*/}*.css',
+          '<%= yeoman.app %>/++resource++fhnw.angularsolr.images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     },
@@ -79,8 +79,8 @@ module.exports = function (grunt) {
             return [
               connect.static('.tmp'),
               connect().use(
-                '/++resource++collective.angularstarter.bower_components',
-                connect.static('./++resource++collective.angularstarter.bower_components')
+                '/++resource++fhnw.angularsolr.bower_components',
+                connect.static('./++resource++fhnw.angularsolr.bower_components')
               ),
               connect.static(appConfig.app)
             ];
@@ -95,8 +95,8 @@ module.exports = function (grunt) {
               connect.static('.tmp'),
               connect.static('test'),
               connect().use(
-                '/++resource++collective.angularstarter.bower_components',
-                connect.static('./++resource++collective.angularstarter.bower_components')
+                '/++resource++fhnw.angularsolr.bower_components',
+                connect.static('./++resource++fhnw.angularsolr.bower_components')
               ),
               connect.static(appConfig.app)
             ];
@@ -120,7 +120,7 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/++resource++collective.angularstarter.scripts/{,*/}*.js'
+          '<%= yeoman.app %>/++resource++fhnw.angularsolr.scripts/{,*/}*.js'
         ]
       },
       test: {
@@ -154,9 +154,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/++resource++collective.angularstarter.styles/',
+          cwd: '.tmp/++resource++fhnw.angularsolr.styles/',
           src: '{,*/}*.css',
-          dest: '.tmp/++resource++collective.angularstarter.styles/'
+          dest: '.tmp/++resource++fhnw.angularsolr.styles/'
         }]
       }
     },
@@ -165,8 +165,8 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        exclude: ['./\\+\\+resource\\+\\+collective.angularstarter.bower_components/bootstrap/dist/js/bootstrap.js', './\\+\\+resource\\+\\+collective.angularstarter.bower_components/jquery/dist/jquery.js', './\\+\\+resource\\+\\+collective.angularstarter.bower_components/angular-resource/angular-resource.js', '.\\+\\+resource\\+\\+collective.angularstarter.bower_components/angular-cookies/angular-cookies.js', './\\+\\+resource\\+\\+collective.angularstarter.bower_components/angular-sanitize/angular-sanitize.js', './\\+\\+resource\\+\\+collective.angularstarter.bower_components/angular-animate/angular-animate.js', './\\+\\+resource\\+\\+collective.angularstarter.bower_components/angular-touch/angular-touch.js'],
-//        exclude: ['./++resource++collective.angularstarter.bower_components/bootstrap/dist/js/bootstrap.js', './++resource++collective.angularstarter.bower_components/jquery/dist/jquery.js', './++resource++collective.angularstarter.bower_components/angular-resource/angular-resource.js', '.++resource++collective.angularstarter.bower_components/angular-cookies/angular-cookies.js', './++resource++collective.angularstarter.bower_components/angular-sanitize/angular-sanitize.js', './++resource++collective.angularstarter.bower_components/angular-animate/angular-animate.js', './++resource++collective.angularstarter.bower_components/angular-touch/angular-touch.js'],
+        exclude: ['./\\+\\+resource\\+\\+fhnw.angularsolr.bower_components/bootstrap/dist/js/bootstrap.js', './\\+\\+resource\\+\\+fhnw.angularsolr.bower_components/jquery/dist/jquery.js', './\\+\\+resource\\+\\+fhnw.angularsolr.bower_components/angular-resource/angular-resource.js', '.\\+\\+resource\\+\\+fhnw.angularsolr.bower_components/angular-cookies/angular-cookies.js', './\\+\\+resource\\+\\+fhnw.angularsolr.bower_components/angular-sanitize/angular-sanitize.js', './\\+\\+resource\\+\\+fhnw.angularsolr.bower_components/angular-animate/angular-animate.js', './\\+\\+resource\\+\\+fhnw.angularsolr.bower_components/angular-touch/angular-touch.js'],
+//        exclude: ['./++resource++fhnw.angularsolr.bower_components/bootstrap/dist/js/bootstrap.js', './++resource++fhnw.angularsolr.bower_components/jquery/dist/jquery.js', './++resource++fhnw.angularsolr.bower_components/angular-resource/angular-resource.js', '.++resource++fhnw.angularsolr.bower_components/angular-cookies/angular-cookies.js', './++resource++fhnw.angularsolr.bower_components/angular-sanitize/angular-sanitize.js', './++resource++fhnw.angularsolr.bower_components/angular-animate/angular-animate.js', './++resource++fhnw.angularsolr.bower_components/angular-touch/angular-touch.js'],
         ignorePath:  /\.\.\//
       }
     },
@@ -175,10 +175,10 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/++resource++collective.angularstarter.scripts/{,*/}*.js',
-          '<%= yeoman.dist %>/++resource++collective.angularstarter.styles/{,*/}*.css',
-          '<%= yeoman.dist %>/++resource++collective.angularstarter.images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= yeoman.dist %>/++resource++collective.angularstarter.fonts/*'
+          '<%= yeoman.dist %>/++resource++fhnw.angularsolr.scripts/{,*/}*.js',
+          '<%= yeoman.dist %>/++resource++fhnw.angularsolr.styles/{,*/}*.css',
+          '<%= yeoman.dist %>/++resource++fhnw.angularsolr.images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= yeoman.dist %>/++resource++fhnw.angularsolr.fonts/*'
         ]
       }
     },
@@ -205,9 +205,9 @@ module.exports = function (grunt) {
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/++resource++collective.angularstarter.styles/{,*/}*.css'],
+      css: ['<%= yeoman.dist %>/++resource++fhnw.angularsolr.styles/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/++resource++collective.angularstarter.images']
+        assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/++resource++fhnw.angularsolr.images']
       }
     },
 
@@ -218,8 +218,8 @@ module.exports = function (grunt) {
     // cssmin: {
     //   dist: {
     //     files: {
-    //       '<%= yeoman.dist %>/++resource++collective.angularstarter.styles/main.css': [
-    //         '.tmp/++resource++collective.angularstarter.styles/{,*/}*.css'
+    //       '<%= yeoman.dist %>/++resource++fhnw.angularsolr.styles/main.css': [
+    //         '.tmp/++resource++fhnw.angularsolr.styles/{,*/}*.css'
     //       ]
     //     }
     //   }
@@ -227,8 +227,8 @@ module.exports = function (grunt) {
     // uglify: {
     //   dist: {
     //     files: {
-    //       '<%= yeoman.dist %>/++resource++collective.angularstarter.scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/++resource++collective.angularstarter.scripts/scripts.js'
+    //       '<%= yeoman.dist %>/++resource++fhnw.angularsolr.scripts/scripts.js': [
+    //         '<%= yeoman.dist %>/++resource++fhnw.angularsolr.scripts/scripts.js'
     //       ]
     //     }
     //   }
@@ -242,10 +242,10 @@ module.exports = function (grunt) {
         options: {
           ignore: [/li\.active \> a/],
           csspath: '../.tmp',
-          stylesheets: ['concat/++resource++collective.angularstarter.styles/main.css']
+          stylesheets: ['concat/++resource++fhnw.angularsolr.styles/main.css']
         },
         files: {
-          '.tmp/concat/++resource++collective.angularstarter.styles/main.css': ['<%= yeoman.dist %>/index.html', '<%= yeoman.dist %>/++resource++collective.angularstarter.views/main.html', '<%= yeoman.dist %>/++resource++collective.angularstarter.views/searchbycode.html']
+          '.tmp/concat/++resource++fhnw.angularsolr.styles/main.css': ['<%= yeoman.dist %>/index.html', '<%= yeoman.dist %>/++resource++fhnw.angularsolr.views/main.html', '<%= yeoman.dist %>/++resource++fhnw.angularsolr.views/searchbycode.html']
         }
       }
     },
@@ -256,7 +256,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>/images',
           src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/++resource++collective.angularstarter.images'
+          dest: '<%= yeoman.dist %>/++resource++fhnw.angularsolr.images'
         }]
       }
     },
@@ -265,9 +265,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/++resource++collective.angularstarter.images',
+          cwd: '<%= yeoman.app %>/++resource++fhnw.angularsolr.images',
           src: '{,*/}*.svg',
-          dest: '<%= yeoman.dist %>/++resource++collective.angularstarter.images'
+          dest: '<%= yeoman.dist %>/++resource++fhnw.angularsolr.images'
         }]
       }
     },
@@ -288,7 +288,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html', '++resource++collective.angularstarter.views/{,*/}*.html'],
+          src: ['*.html', '++resource++fhnw.angularsolr.views/{,*/}*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -317,7 +317,7 @@ module.exports = function (grunt) {
     sed: {
       html: {
       path: '<%= yeoman.dist %>/index.html',
-      pattern: '\\+\\+resource\\+\\+collective.angularstarter.\\/\\/',
+      pattern: '\\+\\+resource\\+\\+fhnw.angularsolr.\\/\\/',
       replacement: '//'}
     },
 
@@ -333,21 +333,21 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
-            '++resource++collective.angularstarter.views/{,*/}*.html',
-            '++resource++collective.angularstarter.images/{,*/}*.{webp}',
-            '++resource++collective.angularstarter.fonts/*'
+            '++resource++fhnw.angularsolr.views/{,*/}*.html',
+            '++resource++fhnw.angularsolr.images/{,*/}*.{webp}',
+            '++resource++fhnw.angularsolr.fonts/*'
           ]
         }, {
           expand: true,
-          cwd: '.tmp/++resource++collective.angularstarter.images',
-          dest: '<%= yeoman.dist %>/++resource++collective.angularstarter.images',
+          cwd: '.tmp/++resource++fhnw.angularsolr.images',
+          dest: '<%= yeoman.dist %>/++resource++fhnw.angularsolr.images',
           src: ['generated/*']
         }]
       },
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/++resource++collective.angularstarter.styles/',
+        dest: '.tmp/++resource++fhnw.angularsolr.styles/',
         src: '{,*/}*.css'
       }
     },
