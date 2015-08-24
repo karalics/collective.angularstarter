@@ -18,15 +18,15 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '++resource++collective.angularstarter.bower_components/angular/angular.js',
-      '++resource++collective.angularstarter.bower_components/angular-mocks/angular-mocks.js',
-      '++resource++collective.angularstarter.bower_components/angular-animate/angular-animate.js',
-      '++resource++collective.angularstarter.bower_components/angular-cookies/angular-cookies.js',
-      '++resource++collective.angularstarter.bower_components/angular-resource/angular-resource.js',
-      '++resource++collective.angularstarter.bower_components/angular-route/angular-route.js',
-      '++resource++collective.angularstarter.bower_components/angular-sanitize/angular-sanitize.js',
-      '++resource++collective.angularstarter.bower_components/angular-touch/angular-touch.js',
-      '++resource++collective.angularstarter.bower_components/angular-translate/angular-translate.js',
+      '++resource++fhnw.angularsolr.bower_components/angular/angular.js',
+      '++resource++fhnw.angularsolr.bower_components/angular-mocks/angular-mocks.js',
+      '++resource++fhnw.angularsolr.bower_components/angular-animate/angular-animate.js',
+      '++resource++fhnw.angularsolr.bower_components/angular-cookies/angular-cookies.js',
+      '++resource++fhnw.angularsolr.bower_components/angular-resource/angular-resource.js',
+      '++resource++fhnw.angularsolr.bower_components/angular-route/angular-route.js',
+      '++resource++fhnw.angularsolr.bower_components/angular-sanitize/angular-sanitize.js',
+      '++resource++fhnw.angularsolr.bower_components/angular-touch/angular-touch.js',
+      '++resource++fhnw.angularsolr.bower_components/angular-translate/angular-translate.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'

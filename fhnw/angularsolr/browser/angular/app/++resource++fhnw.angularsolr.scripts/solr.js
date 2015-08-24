@@ -29,7 +29,7 @@ var solr = angular.module("solr", [])
     scope: {},
     controller: 'facetGroupController',
     transclude: true,
-    templateUrl:"++resource++collective.angularstarter.views/solr_facet_group.html",
+    templateUrl:"++resource++fhnw.angularsolr.views/solr_facet_group.html",
     require:["^solr", "solrFacetGroup"],
     link: function(scope, element, attrs, ctrls){
       var solrCtrl=ctrls[0];
@@ -62,7 +62,7 @@ var solr = angular.module("solr", [])
       }
     }],
     transclude: true,
-    templateUrl: "++resource++collective.angularstarter.views/solr_selected.html",
+    templateUrl: "++resource++fhnw.angularsolr.views/solr_selected.html",
     require:"^solr",
     link: function(scope, element, attrs, ctrl){
       scope.selected = function(){
@@ -78,7 +78,7 @@ var solr = angular.module("solr", [])
     scope:{
     },
     restrict: "E",
-    templateUrl:"++resource++collective.angularstarter.views/solr_search.html",
+    templateUrl:"++resource++fhnw.angularsolr.views/solr_search.html",
     require: "^solr",
     link: function( scope, element, attrs, ctrl){
       scope.search = function(query, rows){
@@ -114,7 +114,7 @@ var solr = angular.module("solr", [])
       results:"&",
     },
     require:"^solrFacetGroup",
-    templateUrl:"++resource++collective.angularstarter.views/solr_facet.html",
+    templateUrl:"++resource++fhnw.angularsolr.views/solr_facet.html",
     link:  function( scope, element, attrs, ctrl){
       ctrl.registerFacet(scope);
 
@@ -137,7 +137,7 @@ var solr = angular.module("solr", [])
       remove:"@",
     },
     require: "^solr",
-    templateUrl:"++resource++collective.angularstarter.views/solr_facet_result.html",
+    templateUrl:"++resource++fhnw.angularsolr.views/solr_facet_result.html",
     link:  function( scope, element, attrs, ctrl){
       scope.facetString = function(){
         return scope.field+':"'+scope.key+'"';

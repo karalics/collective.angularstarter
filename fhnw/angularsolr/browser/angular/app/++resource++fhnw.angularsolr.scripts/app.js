@@ -11,6 +11,6 @@ app.controller("MainCtrl", ["$scope", "$location",  function($scope, $location){
       scope :{
         doc : "=record",
       },
-      templateUrl:"++resource++collective.angularstarter.views/my_result_document.html",
+      templateUrl:"++resource++fhnw.angularsolr.views/my_result_document.html",
     }
   });

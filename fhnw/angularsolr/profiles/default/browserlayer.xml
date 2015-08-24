@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <layers>
-    <layer name="CollectiveAngularstarterProductionLayer"
-        interface="fhnw.angularsolr.browser.interfaces.ICollectiveAngularstarterProductionLayer"
+    <layer name="FhnwAngularsolrProductionLayer"
+        interface="fhnw.angularsolr.browser.interfaces.IFhnwAngularsolrProductionLayer"
     />
 </layers>
 
